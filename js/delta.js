@@ -156,14 +156,14 @@ Delta = function() {
   //===============================================================================================
 
   var engine,
+      renderer,
+      sounds,
       player,
       bullets,
       aliens,
       rocks,
       effects,
-      stars,
-      renderer,
-      sounds;
+      stars;
 
   //===============================================================================================
   // SETUP
@@ -172,14 +172,14 @@ Delta = function() {
   function run() {
 
     engine   = new Engine();
+    renderer = new Renderer();
+    sounds   = new Sounds();
     player   = new Player();
     bullets  = new Bullets();
     aliens   = new Aliens();
     rocks    = new Rocks();
     effects  = new Effects();
     stars    = new Stars();
-    renderer = new Renderer();
-    sounds   = new Sounds();
 
     Game.run({
       fps:       FPS,
