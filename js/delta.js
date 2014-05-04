@@ -34,10 +34,10 @@ Delta = function() {
     ],
 
     sounds: [
-      { id: "title",   name: "sounds/title",   formats: ['mp3', 'ogg'], volume: 0.2,  loop: true },
-      { id: "game",    name: "sounds/game",    formats: ['mp3', 'ogg'], volume: 0.4,  loop: true },
-      { id: "shoot",   name: "sounds/shoot",   formats: ['mp3', 'ogg'], volume: 0.01, pool: 5 },
-      { id: "explode", name: "sounds/explode", formats: ['mp3', 'ogg'], volume: 0.05, pool: 5 }
+      { id: "title",   name: "sounds/title",   formats: ['mp3', 'ogg'], volume: 0.4,  loop: true },
+      { id: "game",    name: "sounds/game",    formats: ['mp3', 'ogg'], volume: 0.8,  loop: true },
+      { id: "shoot",   name: "sounds/shoot",   formats: ['mp3', 'ogg'], volume: 0.04, pool: 5 },
+      { id: "explode", name: "sounds/explode", formats: ['mp3', 'ogg'], volume: 0.10, pool: 5 }
     ],
 
     state: {
