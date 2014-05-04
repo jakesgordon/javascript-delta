@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
+  <link href='http://fonts.googleapis.com/css?family=Orbitron:400,500,700,900' rel='stylesheet' type='text/css'>
+  <link href="css/normalize.css" media="screen, print" rel="stylesheet" type="text/css" />
+  <link href="css/delta.css"  media="screen, print" rel="stylesheet" type="text/css" />
+  <title>Javascript Delta</title>
+</head>
+
+<body>
+
+  <div id="delta">
+
+    <div id="scoreboard">
+      <span class="lives"><span class="label">LIVES:</span><img class="one" src="images/life.png"><img class="two" src="images/life.png"><img class="three" src="images/life.png"></span>
+      <span class="score"><span class="label">SCORE:</span><span class="value">00000</span></span>
+    </div>
+
+    <img id="booting" src='images/booting.gif'>
+
+    <h1 id="title"   style="display:none;">Delta</h1>
+    <h2 id="start"   style="display:none;">press spacebar to start</h1>
+    <h1 id="prepare" style="display:none;">Fasten Your Seatbelt</h1>
+
+    <canvas id="canvas">
+      <div class="unsupported">
+        Sorry, this example cannot be run because your browser does not support the &lt;canvas&gt; element
+      </div>
+    </canvas>
+
+    <div id="instructions">
+      arrow keys to move, spacebar to shoot
+    </div>
+
+    <div id='sound' class='on' title='toggle music and fx' style="display:none;"></div>
+
+  </div>
+
+  <script src="js/vendor.js"></script>
+  <script src="js/game.js"></script>
+  <script src="js/delta.js"></script>
+  <script>
+    Delta();
+  </script>
+
+</body>
+</html>

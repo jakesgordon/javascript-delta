@@ -1,0 +1,73 @@
+/*******************************/
+/* global document body styles */
+/*******************************/
+
+body {
+  background: black;
+  color:      #CCC;
+  user-select: none;
+  font-family: 'Orbitron', sans-serif;
+  overflow: hidden;
+}
+
+/**************************/
+/* unique id-based styles */
+/**************************/
+
+#delta   { margin: 2em auto; position: relative; background: black; border: 1px solid grey; }
+#booting { position: absolute; width: 6%; left: 47%; top: 47%;      } 
+#canvas  { display: inline-block; width: 100%; height: 100%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; position: absolute; }
+
+h1         { margin: 0px; font-weight: bold;   color: white; display: block; width: 100%; text-align: center; vertical-align: center; z-index: 1; position: absolute;           }
+h2         { margin: 0px; font-weight: normal; color: white; display: block; width: 100%; text-align: center; vertical-align: center; z-index: 1; position: absolute; top: 8em; }
+h1#title   { font-size: 10em; }
+h1#prepare { font-size: 2em;  color: #C0A0A0; }
+h2#start   { font-size: 1em;  color: #A0A0FF; }
+
+#scoreboard               { position: absolute; top: -1.5em; vertical-align: top; line-height: 1.5em; width: 100%; font-size: 1.2em; color: white; }
+#scoreboard .lives        { visibility: hidden; }
+#scoreboard .lives .label { padding: 0 0.5em; color: #808080; }
+#scoreboard .lives  img   { margin-right: 0.5em; }
+#scoreboard .score        { position: absolute; right: 0.5em; }
+#scoreboard .score .label { padding: 0 0.5em; color: #808080; }
+#scoreboard .score .value { display: inline-block; width: 4em; }
+
+#scoreboard .lives.zero img.one   { display: none; }
+#scoreboard .lives.zero img.two   { display: none; }
+#scoreboard .lives.zero img.three { display: none; }
+#scoreboard .lives.one  img.two   { display: none; }
+#scoreboard .lives.one  img.three { display: none; }
+#scoreboard .lives.two  img.three { display: none; }
+
+#instructions { position: absolute; bottom: -1.5em; text-align: right; line-height: 1em; width: 100%; color: #A0A0A0; }
+
+#sound     { width: 24px; height: 24px; background: url(../images/mute.png); display: inline-block; cursor: pointer; position: absolute; left: -2.5em; }
+#sound.on  { background-position:   0   0; }
+#sound.off { background-position: -24px 0; }
+
+#delta.preparing #scoreboard .lives   { visibility: visible; }
+#delta.playing   #scoreboard .lives   { visibility: visible; }
+
+h2#start {
+  -webkit-animation: pulsate 1s ease-out infinite;
+     -moz-animation: pulsate 1s ease-out infinite;
+       -o-animation: pulsate 1s ease-out infinite;
+          animation: pulsate 1s ease-out infinite;
+}
+
+@-webkit-keyframes pulsate { 0% { opacity: 0.0; } 50% { opacity: 1.0; } 100% { opacity: 0.0; } }
+   @-moz-keyframes pulsate { 0% { opacity: 0.0; } 50% { opacity: 1.0; } 100% { opacity: 0.0; } }
+     @-o-keyframes pulsate { 0% { opacity: 0.0; } 50% { opacity: 1.0; } 100% { opacity: 0.0; } }
+        @keyframes pulsate { 0% { opacity: 0.0; } 50% { opacity: 1.0; } 100% { opacity: 0.0; } }
+
+/*****************************/
+/* @media query based layout */
+/*****************************/
+
+@media screen and (min-width:    0px) and (min-height:    0px) { #delta { width:  512px; height: 384px; line-height: 384px; font-size:  7pt; } }
+@media screen and (min-width:  840px) and (min-height:  550px) { #delta { width:  640px; height: 480px; line-height: 480px; font-size:  9pt; } }
+@media screen and (min-width:  968px) and (min-height:  646px) { #delta { width:  768px; height: 576px; line-height: 576px; font-size: 11pt; } }
+@media screen and (min-width: 1096px) and (min-height:  742px) { #delta { width:  896px; height: 672px; line-height: 672px; font-size: 13pt; } }
+@media screen and (min-width: 1224px) and (min-height:  838px) { #delta { width: 1024px; height: 768px; line-height: 768px; font-size: 15pt; } }
+@media screen and (min-width: 1480px) and (min-height: 1030px) { #delta { width: 1280px; height: 960px; line-height: 960px; font-size: 17pt; } }
+
