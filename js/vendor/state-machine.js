@@ -191,12 +191,12 @@
 
   //===========================================================================
 
-  if ("function" === typeof define) {
-    define(function(require) { return StateMachine; });
-  }
-  else {
+  // if ("function" === typeof define) {
+  //   define(function(require) { return StateMachine; });
+  // }
+  // else {
     window.StateMachine = StateMachine;
-  }
+  // }
 
 }(this));
 
