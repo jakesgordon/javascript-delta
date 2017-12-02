@@ -171,15 +171,15 @@ Delta = (function() {
 
   function run() {
 
-    engine   = new Engine();
-    renderer = new Renderer();
-    sounds   = new Sounds();
-    player   = new Player();
-    bullets  = new Bullets();
-    aliens   = new Aliens();
-    rocks    = new Rocks();
-    effects  = new Effects();
-    stars    = new Stars();
+    run.engine   = engine   = new Engine();
+    run.renderer = renderer = new Renderer();
+    run.sounds   = sounds   = new Sounds();
+    run.player   = player   = new Player();
+    run.bullets  = bullets  = new Bullets();
+    run.aliens   = aliens   = new Aliens();
+    run.rocks    = rocks    = new Rocks();
+    run.effects  = effects  = new Effects();
+    run.stars    = stars    = new Stars();
 
     Game.run({
       fps:       FPS,
