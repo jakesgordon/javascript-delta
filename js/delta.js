@@ -1,4 +1,4 @@
-Delta = function() {
+Delta = (function() {
 
   'use strict'
 
@@ -1100,21 +1100,16 @@ Delta = function() {
 
   ];
 
-  //===============================================================================================
-  // LETS PLAY!
-  //===============================================================================================
+    run.cfg      = cfg;
+    run.engine   = engine;
+    run.player   = player;
+    run.bullets  = bullets;
+    run.aliens   = aliens;
+    run.rocks    = rocks;
+    run.stars    = stars;
+    run.renderer = renderer;
 
-  run();
-
-  window.cfg      = cfg;
-  window.engine   = engine;
-  window.player   = player;
-  window.bullets  = bullets;
-  window.aliens   = aliens;
-  window.rocks    = rocks;
-  window.stars    = stars;
-  window.renderer = renderer;
-
+  return run;
   //-----------------------------------------------------------------------------------------------
 
-}
+}());
