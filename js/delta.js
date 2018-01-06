@@ -1,4 +1,4 @@
-Delta = function() {
+Delta = (function() {
 
   'use strict'
 
@@ -171,15 +171,15 @@ Delta = function() {
 
   function run() {
 
-    engine   = new Engine();
-    renderer = new Renderer();
-    sounds   = new Sounds();
-    player   = new Player();
-    bullets  = new Bullets();
-    aliens   = new Aliens();
-    rocks    = new Rocks();
-    effects  = new Effects();
-    stars    = new Stars();
+    run.engine   = engine   = new Engine();
+    run.renderer = renderer = new Renderer();
+    run.sounds   = sounds   = new Sounds();
+    run.player   = player   = new Player();
+    run.bullets  = bullets  = new Bullets();
+    run.aliens   = aliens   = new Aliens();
+    run.rocks    = rocks    = new Rocks();
+    run.effects  = effects  = new Effects();
+    run.stars    = stars    = new Stars();
 
     Game.run({
       fps:       FPS,
@@ -1100,21 +1100,16 @@ Delta = function() {
 
   ];
 
-  //===============================================================================================
-  // LETS PLAY!
-  //===============================================================================================
+    run.cfg      = cfg;
+    run.engine   = engine;
+    run.player   = player;
+    run.bullets  = bullets;
+    run.aliens   = aliens;
+    run.rocks    = rocks;
+    run.stars    = stars;
+    run.renderer = renderer;
 
-  run();
-
-  window.cfg      = cfg;
-  window.engine   = engine;
-  window.player   = player;
-  window.bullets  = bullets;
-  window.aliens   = aliens;
-  window.rocks    = rocks;
-  window.stars    = stars;
-  window.renderer = renderer;
-
+  return run;
   //-----------------------------------------------------------------------------------------------
 
-}
+}());
