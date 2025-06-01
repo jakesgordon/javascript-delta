@@ -3,7 +3,7 @@ Javascript Delta
 
 This is a small weekend homage to the classic c64 shoot-em-up "Delta".
 
- * [Read more](http://codeincomplete.com/posts/2014/5/3/javascript_delta/)
+ * [Read more](https://jakesgordon.com/writing/javascript-delta/)
 
 TODO
 ====
